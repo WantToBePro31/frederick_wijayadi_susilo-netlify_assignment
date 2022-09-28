@@ -1,0 +1,1885 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Oswald:wght@500&family=Permanent+Marker&family=Kanit&family=Ubuntu:wght@700&family=Luckiest+Guy&family=Bungee+Spice&family=Dangrek&display=swap");
+
+/*
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+*, ::before, ::after{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::-webkit-backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0px;
+}
+
+.outer-grid-container{
+  display: grid;
+  cursor: default;
+  grid-auto-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  background-color: #322f3d;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  background-color: #348751;
+}
+
+nav a{
+  cursor: pointer;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #fa8072;
+}
+
+nav a:hover{
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  text-shadow: 0 0 20px #b0e0e6, 0 0 40px #b0e0e6, 0 0 60px #b0e0e6, 0 0 80px #b0e0e6, 0 0 1000px #b0e0e6;
+}
+
+.logo{
+  border-right-width: 1px;
+  border-style: solid;
+  border-right-color: rgb(246, 176, 238);
+  padding-right: 0.5vw;
+  width: 5%;
+}
+
+.showwcase {
+  padding-left: 0.5vw;
+  margin-right: 40vw;
+}
+
+.navbar-right{
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar-right a{
+  display: inline-block;
+  margin-right: 0.5vw;
+}
+
+.navbar-right a:hover{
+  --tw-rotate: 6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@-webkit-keyframes line{
+  from{
+    border-width: 2px;
+    border-style: dashed none dashed none;
+    border-color: rgb(221, 228, 111) #fff rgb(222, 117, 180) #fff;
+  }
+
+  to{
+    border-width: 2px;
+    border-style: dashed none dashed none;
+    border-color: rgb(222, 117, 180) #fff rgb(221, 228, 111) #fff;
+  }
+}
+
+@keyframes line{
+  from{
+    border-width: 2px;
+    border-style: dashed none dashed none;
+    border-color: rgb(221, 228, 111) #fff rgb(222, 117, 180) #fff;
+  }
+
+  to{
+    border-width: 2px;
+    border-style: dashed none dashed none;
+    border-color: rgb(222, 117, 180) #fff rgb(221, 228, 111) #fff;
+  }
+}
+
+.navbar-right a:hover{
+  -webkit-animation: line 0.5s ease-in-out infinite alternate;
+          animation: line 0.5s ease-in-out infinite alternate;
+}
+
+.main-grid-container{
+  display: grid;
+  grid-auto-columns: auto;
+  grid-template-rows: 90vw 60vw 120vw 100vw 120vw;
+}
+
+#home{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2019/12/11/some-bis-biswas-scenery-wallpaper.jpg");
+}
+
+.home-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bungee Spice', cursive;
+  margin-top: 5vh;
+}
+
+.avatar{
+  order: 2;
+  border-radius: 50%;
+  width: 25vh;
+}
+
+.welcome-text{
+  order: 1;
+  margin-right: 1vw;
+}
+
+.waving{
+  display: inline-block;
+}
+
+@-webkit-keyframes wave{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  10%{
+    transform: rotate(10deg);
+  }
+
+  20%{
+    transform: rotate(-5deg);
+  }
+
+  30%{
+    transform: rotate(10deg);
+  }
+
+  40%{
+    transform: rotate(-5deg);
+  }
+
+  50%{
+    transform: rotate(10deg);
+  }
+
+  60%{
+    transform: rotate(-5deg);
+  }
+
+  70%{
+    transform: rotate(10deg);
+  }
+
+  80%{
+    transform: rotate(-5deg);
+  }
+
+  90%{
+    transform: rotate(10deg);
+  }
+
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes wave{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  10%{
+    transform: rotate(10deg);
+  }
+
+  20%{
+    transform: rotate(-5deg);
+  }
+
+  30%{
+    transform: rotate(10deg);
+  }
+
+  40%{
+    transform: rotate(-5deg);
+  }
+
+  50%{
+    transform: rotate(10deg);
+  }
+
+  60%{
+    transform: rotate(-5deg);
+  }
+
+  70%{
+    transform: rotate(10deg);
+  }
+
+  80%{
+    transform: rotate(-5deg);
+  }
+
+  90%{
+    transform: rotate(10deg);
+  }
+
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.waving{
+  -webkit-animation: wave 2.5s infinite;
+          animation: wave 2.5s infinite;
+  cursor: pointer;
+  transform-origin: 70% 70%;
+}
+
+.hello {
+  font-size: 5vh;
+}
+
+.name {
+  font-size: 3vh;
+}
+
+.cv {
+  font-size: 3vh;
+}
+
+#about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/535/845/69/digital-art-artwork-fantasy-art-planet-sun-hd-wallpaper-preview.jpg");
+}
+
+@-webkit-keyframes indeflate{
+  0%{
+    font-size: 3vw;
+  }
+
+  25%{
+    font-size: 3.5vw;
+  }
+
+  50%{
+    font-size: 4vw;
+  }
+
+  75%{
+    font-size: 3.5vw;
+  }
+
+  100%{
+    font-size: 3vw;
+  }
+}
+
+@keyframes indeflate{
+  0%{
+    font-size: 3vw;
+  }
+
+  25%{
+    font-size: 3.5vw;
+  }
+
+  50%{
+    font-size: 4vw;
+  }
+
+  75%{
+    font-size: 3.5vw;
+  }
+
+  100%{
+    font-size: 3vw;
+  }
+}
+
+.title-about{
+  -webkit-animation: indeflate 0.6s ease-in-out infinite;
+          animation: indeflate 0.6s ease-in-out infinite;
+  margin-top: -10vh;
+  font-family: 'Luckiest Guy', cursive;
+  background-image: linear-gradient(90deg, rgba(203,61,154,1) 0%, rgba(62,197,210,1) 44%, rgba(161,254,137,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1rem;
+}
+
+.exclamation {
+  font-family: 'Dangrek', cursive;
+}
+
+.introduction{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.about-detail{
+  display: inline-block;
+  font-size: 1.5vw;
+  max-width: 50%;
+}
+
+.swe-photo{
+  float: right;
+  height: auto;
+  width: 30vw;
+}
+
+#skill{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("https://img2.wallspic.com/previews/3/8/3/5/5/155383/155383-minimalist-minimalism-design-atmosphere-light-x750.jpg");
+}
+
+@-webkit-keyframes textclip{
+  from{
+    background-position: 0;
+  }
+
+  to{
+    background-position: 100%;
+  }
+}
+
+@keyframes textclip{
+  from{
+    background-position: 0;
+  }
+
+  to{
+    background-position: 100%;
+  }
+}
+
+#skill header{
+  -webkit-animation: textclip 1.5s linear infinite;
+          animation: textclip 1.5s linear infinite;
+  background-clip: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3vw;
+  font-size: 3vw;
+  font-family: 'Luckiest Guy', cursive;
+  background-image: linear-gradient(-225deg, #d8d5e2 0%, #a96ee7 29%, #e0439cde 67%, rgb(239, 239, 87) 81%, #f14242 100%);;
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1rem;
+}
+
+#skill .skill-wrapper{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 8vw;
+  margin: 4vw auto;
+}
+
+.packer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+  gap: 2vw;
+}
+
+.progress-bar{
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 5hv;
+  box-shadow: 3px 3px 5px -1px rgba(255, 255, 255, 0.5), -3px -3px 5px -1px rgba(255, 255, 255, 0.5);;
+  border-radius: 1vw;
+  padding: 0.5vw;
+}
+
+.progress-90{
+  position: absolute;
+}
+
+@-webkit-keyframes progressBar90{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 90%;
+    background-color: #52ad72;
+  }
+}
+
+@keyframes progressBar90{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 90%;
+    background-color: #52ad72;
+  }
+}
+
+.progress-90{
+  -webkit-animation: progressBar90 1.5s;
+          animation: progressBar90 1.5s;
+  height: 50%;
+  width: 90%;
+  background-color: #52ad72;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-color: #52ad72;
+}
+
+.progress-80{
+  position: absolute;
+}
+
+@-webkit-keyframes progressBar80{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 80%;
+    background-color: #52ad72;
+  }
+}
+
+@keyframes progressBar80{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 80%;
+    background-color: #52ad72;
+  }
+}
+
+.progress-80{
+  -webkit-animation: progressBar80 1.5s;
+          animation: progressBar80 1.5s;
+  height: 50%;
+  width: 80%;
+  background-color: #52ad72;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-color: #52ad72;
+}
+
+.progress-70{
+  position: absolute;
+}
+
+@-webkit-keyframes progressBar70{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 70%;
+    background-color: #52ad72;
+  }
+}
+
+@keyframes progressBar70{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 70%;
+    background-color: #52ad72;
+  }
+}
+
+.progress-70{
+  -webkit-animation: progressBar70 1.5s;
+          animation: progressBar70 1.5s;
+  height: 50%;
+  width: 70%;
+  background-color: #52ad72;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-color: #52ad72;
+}
+
+.progress-60{
+  position: absolute;
+}
+
+@-webkit-keyframes progressBar60{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 60%;
+    background-color: #52ad72;
+  }
+}
+
+@keyframes progressBar60{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 60%;
+    background-color: #52ad72;
+  }
+}
+
+.progress-60{
+  -webkit-animation: progressBar60 1.5s;
+          animation: progressBar60 1.5s;
+  height: 50%;
+  width: 60%;
+  background-color: #52ad72;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-color: #52ad72;
+}
+
+.progress-50{
+  position: absolute;
+}
+
+@-webkit-keyframes progressBar50{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 50%;
+    background-color: #52ad72;
+  }
+}
+
+@keyframes progressBar50{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 50%;
+    background-color: #52ad72;
+  }
+}
+
+.progress-50{
+  -webkit-animation: progressBar50 1.5s;
+          animation: progressBar50 1.5s;
+  height: 50%;
+  width: 50%;
+  background-color: #52ad72;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-color: #52ad72;
+}
+
+.progress-40{
+  position: absolute;
+}
+
+@-webkit-keyframes progressBar40{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 40%;
+    background-color: #52ad72;
+  }
+}
+
+@keyframes progressBar40{
+  0%{
+    width: 0%;
+    background-color: rgb(239, 132, 132);
+  }
+
+  50%{
+    background-color: rgb(106, 205, 224);
+  }
+
+  100%{
+    width: 40%;
+    background-color: #52ad72;
+  }
+}
+
+.progress-40{
+  -webkit-animation: progressBar40 1.5s;
+          animation: progressBar40 1.5s;
+  height: 50%;
+  width: 40%;
+  background-color: #52ad72;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-color: #52ad72;
+}
+
+#skill img{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 10vw;
+}
+
+.mysql {
+  margin-top: 1.5vw;
+}
+
+.mongodb {
+  margin-top: -1vw;
+}
+
+.ee-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("https://s0.smartresize.com/wallpaper/456/402/HD-wallpaper-beautiful-evening-landscape-minimal-8k-landscape-morning-artist-artwork-digital-art-minimalism-minimalist.jpg");
+  gap: 5vw;
+}
+
+#education{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
+@-webkit-keyframes glow{
+  0%{
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+  }
+
+  10%{
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+  }
+
+  20%{
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+  }
+
+  30%{
+    text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+  }
+
+  40%{
+    text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+  }
+
+  50%{
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  }
+
+  60%{
+    text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+  }
+
+  70%{
+    text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+  }
+
+  80%{
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+  }
+
+  90%{
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+  }
+
+  100%{
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+  }
+}
+
+@keyframes glow{
+  0%{
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+  }
+
+  10%{
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+  }
+
+  20%{
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+  }
+
+  30%{
+    text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+  }
+
+  40%{
+    text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+  }
+
+  50%{
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  }
+
+  60%{
+    text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+  }
+
+  70%{
+    text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+  }
+
+  80%{
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+  }
+
+  90%{
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+  }
+
+  100%{
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+  }
+}
+
+#education header{
+  -webkit-animation: glow 1s infinite;
+          animation: glow 1s infinite;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(43, 177, 226);
+  font-size: 3vw;
+}
+
+.main-list{
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.main-list li{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.item{
+  text-align: center;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.item-1 {
+  margin-top: 3vw;
+  background-color: #ff6347;
+}
+
+.item-2 {
+  margin-top: 3vw;
+  background-color: #adff2f;
+}
+
+.line{
+  position: absolute;
+  border-style: solid;
+  margin-top: 3vw;
+  height: 130%;
+  background-color: #00ffff;
+  border-width: 0.1vw;
+  border-color: #00ffff;
+  top: 0.5vw;
+  left: 0.4vw;
+}
+
+.its {
+  margin: 0 1.5vw;
+  width: 7vw;
+}
+
+.ursulin {
+  width: 10vw;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.description span{
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2vw;
+}
+
+.description ul{
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1vw;
+}
+
+.sub-list li{
+  display: list-item;
+  margin-left: 1vw;
+  list-style-image: linear-gradient(to right bottom, salmon, whitesmoke , aquamarine);
+}
+
+#experience{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
+#experience header{
+  order: 2;
+}
+
+@keyframes glow{
+  0%{
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+  }
+
+  10%{
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+  }
+
+  20%{
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+  }
+
+  30%{
+    text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+  }
+
+  40%{
+    text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+  }
+
+  50%{
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  }
+
+  60%{
+    text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+  }
+
+  70%{
+    text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+  }
+
+  80%{
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+  }
+
+  90%{
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+  }
+
+  100%{
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+  }
+}
+
+#experience header{
+  -webkit-animation: glow 1s infinite;
+          animation: glow 1s infinite;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(43, 177, 226);
+  font-size: 3vw;
+}
+
+#experience img {
+  width: 8vw;
+}
+
+.item-3 {
+  margin-top: 3vw;
+  background-color: #ff6347;
+}
+
+.item-4 {
+  margin-top: 4.5vw;
+  background-color: #adff2f;
+}
+
+.experience-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2vw;
+  gap: 2vw;
+}
+
+.sub-sub-list li{
+  display: list-item;
+  margin-left: 1vw;
+  list-style-image: linear-gradient(to right top, gold, ivory, chartreuse);
+}
+
+.fill {
+  width: 9vw;
+}
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/originals/2a/bf/99/2abf995a71308926ca9ba270ad928c6d.jpg");
+}
+
+.card{
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 80%;
+  background-image: url("https://cdn.wallpapersafari.com/40/67/g32cZY.jpg");
+  border-radius: 8%;
+  gap: 1vw;
+}
+
+.contact-header{
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  transition-duration: 500ms;
+  font-size: 7vw;
+  color: #ffebcd;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(203,61,154,1) 0%, rgba(62,197,210,1) 44%, rgba(161,254,137,1) 100%);
+  background-size: 100% 0.3vw, 0 0.3vw;
+  background-position: 100% 100%, 0 100%;
+  transition-property: background-size;
+}
+
+.contact-header:hover {
+  background-size: 0 0.3vw, 100% 0.3vw;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  text-align: center;
+  border-width: 0.2vw;
+  border-color: #00ffff;
+  width: 60vw;
+  gap: 2vw;
+  margin-bottom: 4vw;
+}
+
+.form-detail{
+  text-transform: uppercase;
+  color: #7fffd4;
+  font-size: 5vw;
+  margin-bottom: 1vw;
+}
+
+label {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2vw;
+  color: rgb(50, 48, 45);
+}
+
+fieldset div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+
+.form-image {
+  margin: 1vw 0;
+  width: 7vw;
+}
+
+input{
+  width: 100%;
+  border-style: solid;
+  font-weight: 700;
+  border-width: 0.3vw;
+  border-color: #808080;
+  background: rgba(71, 45, 45, 0.15);
+  padding: 0.5vw;
+  color: rgb(32, 193, 234) !important;
+  font-size: 2vw;
+}
+
+input::-moz-placeholder{
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input::placeholder{
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+textarea{
+  font-weight: 700;
+  width: 50vw;
+  height: 20vw;
+  background-color: #ffc0cb;
+  padding: 0.5vw;
+  color: rgb(8, 17, 184);
+  font-size: 2vw;
+}
+
+textarea::-moz-placeholder{
+  font-weight: 700;
+  color: rgb(66, 58, 58, 0.4);
+}
+
+textarea::placeholder{
+  font-weight: 700;
+  color: rgb(66, 58, 58, 0.4);
+}
+
+.submit-button{
+  position: relative;
+  overflow: hidden;
+  border-style: none;
+  font-weight: 700;
+  transition-duration: 700ms;
+  width: 30vw;
+  border-radius: 1vw;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2vw;
+  background: #18d26e !important;
+  margin-bottom: 1vw;
+}
+
+button::before{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  transition-duration: 700ms;
+  content: "";
+  width: 2vw;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(45vw);
+}
+
+button:hover::before {
+  transform: skewX(45deg) translateX(-45vw);
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(237, 212, 180);
+}
+
+.social-media{
+  display: flex;
+  margin: 1vw 0;
+  gap: 1.5vw;
+}
+
+.social-media a{
+  transition-duration: 500ms;
+  transition-property: transform;
+}
+
+.social-media a:hover{
+  transform: translateY(-1vw);
+}
+
+.social-media-icon {
+  width: 7vw;
+}
+
+.copyright {
+  font-family: 'Kanit', sans-serif;
+  margin-bottom: 1vw;
+  font-size: 3vw;
+}
+
+.flex{
+  display: flex;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+@media (min-width: 1024px){
+  .lg\:mr-\[20vw\]{
+    margin-right: 20vw;
+  }
+
+  .lg\:ml-0{
+    margin-left: 0px;
+  }
+
+  .lg\:mt-\[8vw\]{
+    margin-top: 8vw;
+  }
+
+  .lg\:mt-\[-15vw\]{
+    margin-top: -15vw;
+  }
+
+  .lg\:mt-\[5vw\]{
+    margin-top: 5vw;
+  }
+
+  .lg\:w-\[40vw\]{
+    width: 40vw;
+  }
+
+  .lg\:w-\[60vh\]{
+    width: 60vh;
+  }
+
+  .lg\:w-\[17vw\]{
+    width: 17vw;
+  }
+
+  .lg\:w-\[3vh\]{
+    width: 3vh;
+  }
+
+  .lg\:w-\[3vw\]{
+    width: 3vw;
+  }
+
+  .lg\:grid-rows-lmain{
+    grid-template-rows: 50vw 40vw 80vw 90vw 90vw;
+  }
+
+  .lg\:text-\[7vw\]{
+    font-size: 7vw;
+  }
+
+  .lg\:text-\[5vw\]{
+    font-size: 5vw;
+  }
+
+  .lg\:text-\[4vw\]{
+    font-size: 4vw;
+  }
+
+  .lg\:text-\[1\.5vw\]{
+    font-size: 1.5vw;
+  }
+
+  .lg\:text-\[6vw\]{
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1023px){
+  .phone\:mr-\[45vw\]{
+    margin-right: 45vw;
+  }
+
+  .phone\:ml-\[-30vw\]{
+    margin-left: -30vw;
+  }
+
+  .phone\:mt-\[5vw\]{
+    margin-top: 5vw;
+  }
+
+  .phone\:mt-\[-20vw\]{
+    margin-top: -20vw;
+  }
+
+  .phone\:mt-\[10vw\]{
+    margin-top: 10vw;
+  }
+
+  .phone\:w-\[35vw\]{
+    width: 35vw;
+  }
+
+  .phone\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .phone\:w-\[22vw\]{
+    width: 22vw;
+  }
+
+  .phone\:w-\[3vh\]{
+    width: 3vh;
+  }
+
+  .phone\:w-\[4\.5vw\]{
+    width: 4.5vw;
+  }
+
+  .phone\:grid-rows-smain{
+    grid-template-rows: 50vw 50vw 90vw 90vw 90vw;
+  }
+
+  .phone\:text-\[7vw\]{
+    font-size: 7vw;
+  }
+
+  .phone\:text-\[5vw\]{
+    font-size: 5vw;
+  }
+
+  .phone\:text-\[4vw\]{
+    font-size: 4vw;
+  }
+
+  .phone\:text-\[2vw\]{
+    font-size: 2vw;
+  }
+
+  .phone\:text-\[6vw\]{
+    font-size: 6vw;
+  }
+}
